@@ -1,5 +1,7 @@
 package com.info.numbers.search.api;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -9,9 +11,11 @@ import org.springframework.web.client.RestTemplate;
 
 
 @Component
+@ConfigurationProperties(prefix = "number")
 public class NumberApi {
 
-    private final String NUMBER_API_URL = "http://numbersapi.com";
+    @Value("${number.api.url}")
+    private String NUMBER_API_URL;
     private final RestTemplate restTemplate;
 
     public NumberApi(RestTemplate restTemplate) {
