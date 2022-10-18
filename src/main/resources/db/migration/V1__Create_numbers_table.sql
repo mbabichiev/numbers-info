@@ -1,0 +1,7 @@
+CREATE TABLE numbers
+(
+    number   INT PRIMARY KEY,
+    trivia   CHARACTER VARYING(250) NOT NULL,
+    math     CHARACTER VARYING(250) NOT NULL,
+    year     CHARACTER VARYING(250) NOT NULL
+);
