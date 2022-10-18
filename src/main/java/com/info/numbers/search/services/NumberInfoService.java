@@ -17,6 +17,11 @@ public class NumberInfoService {
     private NumberApi numberApi;
     private NumberInfoRepository numberInfoRepository;
 
+    public NumberInfoService(NumberInfoRepository numberInfoRepository, NumberApi numberApi) {
+        this.numberInfoRepository = numberInfoRepository;
+        this.numberApi = numberApi;
+    }
+
     public Number getFullNumberInfo(int value) {
 
         if(numberInfoRepository.existsById(value)) {
