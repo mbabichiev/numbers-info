@@ -1,3 +1,3 @@
-# yt-data-search
+# numbers-info
 
-Simple app with using Spring Framework and YT Data API
+Simple app with using Spring Framework and Numbers API
